@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="col">
+        <div class="container">
+            <div class="row">
+                <div class="cim">
+                <h1>Egyenes vonalú egyenletes mozgás</h1>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Sebesség</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="" id="km1" onchange="fasz()"> Km</label>
+                        <label><input type="number" min="0" value="" id="h1" onchange="fasz()"> h</label>
+                        <label><output id="kmh1">.</output>Km/h</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Út</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="" id="kmh2" onchange="fasz2()">Km/h</label>
+                        <label><input type="number" min="0" value="" id="h2" onchange="fasz2()"> h</label>
+                        <label><output id="km2">.</output> Km</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Idő</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="" id="km3" onchange="fasz3()"> Km</label>
+                        <label><input type="number" min="0" value="" id="kmh3" onchange="fasz3()">Km/h</label>
+                        <label><output id="h3">.</output> h</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cim">
+                <h1>Gyorsulás</h1>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Gyorsulás</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="" id="ms01" onchange="doit()"> m/s<sub>0</sub></label>
+                        <label><input type="number" min="0" value="" id="ms1" onchange="doit()"> m/s</label>
+                        <label><input type="number" min="0" value="" id="s1" onchange="doit()"> s</label>
+                        <label><output id="a1">.</output> m/s<sup>2</sup></label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Sebesség</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="" id="s2" onchange="doit2()"> s</label>
+                        <label><input type="number" min="0" value="" id="a2" onchange="doit2()"> m/s<sup>2</sup></label>
+                        <label><output id="ms2">.</output>m/s</label>
+                    </div>
+                    <div class="ads">
+                        <h1>V<sub>0</sub>=0</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Idő</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="" id="ms03" onchange="doit3()"> m/s<sub>0</sub></label>
+                        <label><input type="number" min="0" value="" id="ms3" onchange="doit3()"> m/s</label>
+                        <label><input type="number" min="0" value="" id="a3" onchange="doit3()"> m/s<sup>2</sup></label>
+                        <label><output id="s3">.</output>s</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cim">
+                <h1>Egyenes vonalú egyenletesen változó mozgás</h1>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Út</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="." id="ms04" onchange="eur1()">m/s<sub>0</sub></label>
+                        <label><input type="number" min="0" value="." id="s4" onchange="eur1()">s</label>
+                        <label><input type="number" min="0" value="." id="a4" onchange="eur1()">m/s<sup>2</sup></label>
+                        <label><output id="m1">.</output>m</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Sebesség</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="." id="ms05" onchange="eur2()">m/s<sub>0</sub></label>
+                        <label><input type="number" min="0" value="." id="s5" onchange="eur2()">s</label>
+                        <label><input type="number" min="0" value="." id="a5" onchange="eur2()">m/s<sup>2</sup></label>
+                        <label><output id="ms4">.</output>m/s</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cim">
+                <h1>Lefelé hajítás</h1>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cim">
+                <h1>Cím</h1>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cim">
+                <h1>Cím</h1>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cim">
+                <h1>Cím</h1>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cim">
+                <h1>Cím</h1>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cim">
+                <h1>Cím</h1>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cim">
+                <h1>Cím</h1>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+                <div class="card col-sm-4">
+                    <h2>Fajta</h2>
+                    <div class="inputs">
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><input type="number" min="0" value="10" id="" onchange="()">ME</label>
+                        <label><output id="">1</output>ME</label>
+                    </div>
+                    <div class="ads">
+                        <h1>ADS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="test.js"></script>
+</body>
+
+</html>
